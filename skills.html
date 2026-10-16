@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills | Pascal Mwagambo</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .page-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 8% 70px;
+            min-height: 70vh;
+        }
+
+        .page-content h1 {
+            font-size: clamp(2.3rem, 5vw, 3.5rem);
+            margin-bottom: 15px;
+        }
+
+        .page-content h1 span,
+        .skill-card h2 {
+            color: #38bdf8;
+        }
+
+        .page-intro {
+            line-height: 1.8;
+            max-width: 700px;
+            margin-bottom: 35px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .skill-card {
+            background: #172e50;
+            border: 1px solid #294568;
+            border-radius: 14px;
+            padding: 25px;
+        }
+
+        .skill-card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            line-height: 1.8;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 12px 22px;
+            background: #38bdf8;
+            color: #101d35;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Pascal Mwagambo<span>.</span></div>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1>My <span>Skills</span></h1>
+
+        <p class="page-intro">
+            I am developing my skills in web development and graphic design.
+            I enjoy learning new technologies and using them to create useful,
+            attractive digital experiences.
+        </p>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h2>Web Development</h2>
+                <p>Building website layouts and pages using HTML and CSS, with a focus on responsive design.</p>
+            </div>
+
+            <div class="skill-card">
+                <h2>Programming</h2>
+                <p>Learning Python and Flask to build web applications, forms, login systems, and other features.</p>
+            </div>
+
+            <div class="skill-card">
+                <h2>Graphic Design</h2>
+                <p>Creating visual content, layouts, and digital designs for personal and business projects.</p>
+            </div>
+
+            <div class="skill-card">
+                <h2>Problem Solving</h2>
+                <p>Practising how to identify errors, troubleshoot websites, and improve projects step by step.</p>
+            </div>
+        </div>
+
+        <a class="back-link" href="index.html">Back to Home</a>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Pascal Mwagambo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
