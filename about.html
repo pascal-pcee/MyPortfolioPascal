@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Pascal Mwagambo, web developer and graphic designer based in Kilifi, Kenya.">
+    <title>About Me | Pascal Mwagambo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">PASCAL<span>.</span></a>
+
+        <button class="menu-toggle" id="menuToggle"
+            aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html" aria-current="page">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="welcome">GET TO KNOW ME</p>
+
+                <h1>About <span class="highlight">Pascal</span></h1>
+
+                <h2>Web Developer & Graphic Designer</h2>
+
+                <p class="hero-description">
+                    Hello! I'm Pascal Mwagambo, a creative web developer
+                    and graphic designer based in Kilifi, Kenya.
+
+                    I'm passionate about building beautiful websites,
+                    designing engaging graphics and using technology
+                    to solve real-world problems.
+
+                    I enjoy learning new skills, exploring creative ideas
+                    and turning concepts into useful digital experiences.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn primary-btn">
+                        Explore My Projects ↗
+                    </a>
+                    <a href="contact.html" class="btn secondary-btn">
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-art">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="art-card">
+                    <span class="code-icon">&lt;/&gt;</span>
+                    <h3>MY CREATIVE JOURNEY</h3>
+                    <p>Learning. Building. Improving.</p>
+                    <div class="art-line"></div>
+                    <div class="art-line short"></div>
+                    <div class="art-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="floating-tag tag-top">WEB DEVELOPER</div>
+                <div class="floating-tag tag-bottom">GRAPHIC DESIGNER</div>
+            </div>
+        </section>
+
+        <div class="marquee">
+            <div class="marquee-track">
+                <span>CREATIVITY ✦ TECHNOLOGY ✦ DESIGN ✦ INNOVATION ✦ </span>
+                <span aria-hidden="true">CREATIVITY ✦ TECHNOLOGY ✦ DESIGN ✦ INNOVATION ✦ </span>
+            </div>
+        </div>
+
+        <section class="section about">
+            <p class="section-label">MY MISSION</p>
+            <h2>Turning Ideas Into <span class="highlight">Reality</span></h2>
+
+            <p class="section-description">
+                My goal is to create digital experiences that are attractive,
+                accessible and useful. Every project is an opportunity to
+                improve my skills, solve a problem and deliver something
+                meaningful.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="logo">PASCAL<span>.</span></a>
+        <p>© <span id="year"></span> Pascal Mwagambo.</p>
+        <a href="index.html">Back to Home ↑</a>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navbar = document.getElementById("navbar");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navbar.classList.toggle("active");
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        navbar.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navbar.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.textContent = "☰";
+            });
+        });
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
